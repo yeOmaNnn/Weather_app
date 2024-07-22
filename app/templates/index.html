@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Weather App</title>
+    <link rel="stylesheet" type="text/css" href="/static/css/style.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" rel="stylesheet">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    <script src="/static/js/app.js"></script>
+</head>
+<body>
+<h1>Weather App</h1>
+<form id="weather-form">
+    <input type="text" id="city-input" name="city" placeholder="Enter city" value="{{ last_city }}">
+    <button type="submit">Get Weather</button>
+</form>
+<div class="d-flex justify-content-center" id="last-cities">
+</div>
+<div id="weather-result"></div>
+<template id="weather-template">
+    <div class="card mb-3">
+        <div class="card-body">
+            <h5 class="card-title"><i class="fas fa-city"></i> City: <span class="city-name"></span></h5>
+            <p class="card-text"><i class="fas fa-thermometer-half"></i> Temperature: <span class="temperature"></span>
+                °C</p>
+            <p class="card-text"><i class="fas fa-wind"></i> Wind Speed: <span class="wind-speed"></span> m/s</p>
+            <p class="card-text"><i class="fas fa-cloud"></i> Description: <span class="description"></span></p>
+        </div>
+    </div>
+</template>
+</body>
+</html>
